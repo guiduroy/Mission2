@@ -73,9 +73,4 @@ public interface RBinaryTree<E> {
    * @post tree is the right subtree of this.
    */
   public void setRight (RBinaryTree<E> tree);
-  
-  public RecursiveBinaryTree derive ();
-  
-  public String getOperator ();
-
 }

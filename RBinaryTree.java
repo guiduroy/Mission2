@@ -61,5 +61,7 @@ public interface RBinaryTree<E> {
   public void setRight (RBinaryTree<E> tree);
   
   public RecursiveBinaryTree derive ();
+  
+  public String getOperator ();
 
 }

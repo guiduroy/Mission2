@@ -41,6 +41,19 @@ public interface RBinaryTree<E> {
    * @post return a reference to the right subtree.
    */
   public RBinaryTree<E> getRight();
+	
+	/**
+     * @pre this is not empty.
+     * @post return true if there is a right subtree.
+     */
+    public boolean hasRight();
+	
+	/**
+     * @pre this is not empty.
+     * @post return true if there is a left subtree.
+     */
+    public boolean hasLeft();
+		
 
   /**
    * @pre this is not empty.

@@ -71,6 +71,22 @@ public class RecursiveBinaryTree<E> implements RBinaryTree<E> {
     public RBinaryTree<E> getRight(){
         return right;
     }
+	
+	/**
+     * @pre this is not empty.
+     * @post return true if there is a right subtree.
+     */
+    public boolean hasRight(){
+        return (right!=null);
+    }
+	
+	/**
+     * @pre this is not empty.
+     * @post return true if there is a left subtree.
+     */
+    public boolean hasLeft(){
+        return (left!=null);
+    }
 
     /**
      * @pre this is not empty.

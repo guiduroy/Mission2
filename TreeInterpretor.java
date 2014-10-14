@@ -24,27 +24,27 @@ public class TreeInterpretor {
 		 if !(tree.isLeaf()) then print ")"
 		 */
 		
-		if !(tree.isLeaf()) { //
+		if !(tree.isLeaf()) { //add an open parenthesis
 			expression = expression.concat(par1);
 		}
 		
-		if (tree.hasLeft()) {
+		if (tree.hasLeft()) { //apply the Euler tour on the left subtree
 			eulerTour(getLeft(tree));
 		}
 		
-		if !(tree.isLeaf()) {
+		if !(tree.isLeaf()) { //add the operator of the root
 			expression = expression.concat(printOperator(tree));
 		}
 		
-		else {
+		else { //add the variable of the leaf
 			expression = expression.concat(printVariable);
 		}
 		
-		if (tree.hasRight()) {
+		if (tree.hasRight()) { //apply the Euler tour on the right subtree
 			eulerTour(getLeft(tree));
 		}
 		
-		if !(tree.isLeaf()) {
+		if !(tree.isLeaf()) { //add a closed parenthesis
 			expression = expression.concat(par2);
 		}
 		

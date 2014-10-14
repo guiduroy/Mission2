@@ -7,7 +7,7 @@ public class NumberOperator extends RecursiveBinaryTree {
 	}
 	
 	public RecursiveBinaryTree derive () {
-		return this;
+		return new NumberOperator (0);
 	}
 	
 	public String getOperator () {

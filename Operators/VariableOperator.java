@@ -1,3 +1,6 @@
+package Operators;
+import Lib.RecursiveBinaryTree;
+
 
 public class VariableOperator extends RecursiveBinaryTree {
 	

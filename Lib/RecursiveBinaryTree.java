@@ -1,3 +1,4 @@
+package Lib;
 /**
  * Classe RecursiveBinaryTree implements RBinaryTree
  * Authors : Christophe Deleval, Anne-Sophie Branders
@@ -15,10 +16,10 @@ public class RecursiveBinaryTree<E> implements RBinaryTree<E> {
      * Constructor of RecursiveBinaryTree
      */
     public RecursiveBinaryTree(){
-        root=null;
-        size=0;
-        left = null;
-        right = null;
+        root 	= null;
+        size 	= 0;
+        left 	= null;
+        right 	= null;
     }
 
     /**
@@ -114,13 +115,8 @@ public class RecursiveBinaryTree<E> implements RBinaryTree<E> {
         size += right.size();
     }
     
-    public RecursiveBinaryTree derive () {
-    	return null;
-    }
-    
     public String getOperator () {
 		return null;
 	}
-
 }
 

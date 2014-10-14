@@ -1,3 +1,5 @@
+import Lib.RecursiveBinaryTree;
+
 /**
  * Classe TreeInterpretor transforming a binary tree in a parenthesized expression using the Eurle tour
  * Author : Anne-Sophie Branders

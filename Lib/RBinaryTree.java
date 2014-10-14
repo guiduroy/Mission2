@@ -1,3 +1,4 @@
+package Lib;
 /**
  * Interface for a Binary Tree defined recursively.
  *

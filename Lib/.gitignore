@@ -3,3 +3,12 @@
 /Stack.class
 /Node.class
 /MyStack.class
+/MyStack$Node.class
+/Stack$Node.class
+/GenericStack$Node.class
+/GenericStack.class
+/Stack$EmptyQueueException.class
+/NodeStack$Node.class
+/NodeStack.class
+/Stack$EmptyStackException.class
+/EmptyStackException.class

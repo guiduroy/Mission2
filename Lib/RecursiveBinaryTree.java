@@ -114,9 +114,5 @@ public class RecursiveBinaryTree<E> implements RBinaryTree<E> {
         right = (RecursiveBinaryTree<E>) tree;
         size += right.size();
     }
-    
-    public String getOperator () {
-		return null;
-	}
 }
 

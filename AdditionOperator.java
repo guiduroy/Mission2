@@ -7,5 +7,9 @@ public class AdditionOperator extends RecursiveBinaryTree {
 		add.setRight(this.getRight().derive());
 		return add;
 	}
+	
+	public String getOperator () {
+		return "+";
+	}
 }
 

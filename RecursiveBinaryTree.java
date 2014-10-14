@@ -2,7 +2,6 @@
  * Classe RecursiveBinaryTree implements RBinaryTree
  * Authors : Christophe Deleval, Anne-Sophie Branders
  * Date : 13/10/2014
- * Version 3
  */ 
 
 public class RecursiveBinaryTree<E> implements RBinaryTree<E> {
@@ -102,21 +101,10 @@ public class RecursiveBinaryTree<E> implements RBinaryTree<E> {
     public RecursiveBinaryTree derive () {
     	return null;
     }
+    
+    public String getOperator () {
+		return null;
+	}
 
-	/**
-     * @pre this is not empty.
-     * @post return true if there is a right subtree.
-     */
-    public RBinaryTree<E> hasRight(){
-        return right != null;
-    }
-	
-	/**
-     * @pre this is not empty.
-     * @post return true if there is a left subtree.
-     */
-    public RBinaryTree<E> hasLeft(){
-        return left != null;
-    }
 }
 

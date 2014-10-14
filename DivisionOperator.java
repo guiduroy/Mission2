@@ -16,11 +16,15 @@ public class DivisionOperator extends RecursiveBinaryTree {
 		
 		PowerOperator denom = new PowerOperator ();
 		denom.setLeft(this.getRight());
-		denom.setRight(new Value(2));
+		denom.setRight(new NumberOperator (2));
 		
 		DivisionOperator res = new DivisionOperator ();
 		res.setLeft(numer);
 		res.setRight(denom);
 		return res;
+	}
+	
+	public String getOperator () {
+		return "/";
 	}
 }

@@ -7,5 +7,9 @@ public class SubtractionOperator extends RecursiveBinaryTree {
 		sub.setRight(this.getRight().derive());
 		return sub;
 	}
+	
+	public String getOperator () {
+		return "-";
+	}
 }
 

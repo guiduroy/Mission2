@@ -15,5 +15,9 @@ public class MultiplicationOperator extends RecursiveBinaryTree {
 		res.setRight(right);
 		return res;
 	}
+	
+	public String getOperator () {
+		return "*";
+	}
 }
 

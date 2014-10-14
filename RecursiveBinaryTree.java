@@ -2,6 +2,7 @@
  * Classe RecursiveBinaryTree implements RBinaryTree
  * Authors : Christophe Deleval, Anne-Sophie Branders
  * Date : 13/10/2014
+ * Version 3
  */ 
 
 public class RecursiveBinaryTree<E> implements RBinaryTree<E> {

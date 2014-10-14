@@ -2,6 +2,11 @@ package Operators;
 import Code.FormalExpressionTree;
 
 public class DivisionOperator extends FormalExpressionTree {
+
+	public DivisionOperator () {
+		super ();
+		this.setElement("/");
+	}
 	
 	public FormalExpressionTree derive () {
 		MultiplicationOperator left = new MultiplicationOperator ();
@@ -24,9 +29,5 @@ public class DivisionOperator extends FormalExpressionTree {
 		res.setLeft(numer);
 		res.setRight(denom);
 		return res;
-	}
-	
-	public String getOperator () {
-		return "/";
 	}
 }

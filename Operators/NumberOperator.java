@@ -11,8 +11,4 @@ public class NumberOperator extends FormalExpressionTree {
 	public FormalExpressionTree derive () {
 		return new NumberOperator("0");
 	}
-	
-	public String getOperator () {
-		return this.root().toString();
-	}
 }

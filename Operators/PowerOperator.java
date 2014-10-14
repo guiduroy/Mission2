@@ -2,6 +2,11 @@ package Operators;
 import Code.FormalExpressionTree;
 
 public class PowerOperator extends FormalExpressionTree {
+
+	public PowerOperator () {
+		super ();
+		this.setElement("^");
+	}
 	
 	public FormalExpressionTree derive () {
 		SubtractionOperator one = new SubtractionOperator ();
@@ -21,9 +26,5 @@ public class PowerOperator extends FormalExpressionTree {
 		four.setRight(((FormalExpressionTree)this.getLeft()).derive());
 		
 		return four;
-	}
-	
-	public String getOperator () {
-		return "^";
 	}
 }

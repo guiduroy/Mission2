@@ -11,8 +11,4 @@ public class VariableOperator extends FormalExpressionTree {
 	public FormalExpressionTree derive () {
 		return new NumberOperator ("1");
 	}
-	
-	public String getOperator () {
-		return this.root().toString();
-	}
 }

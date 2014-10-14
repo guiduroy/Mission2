@@ -1,3 +1,5 @@
+import Lib.RecursiveBinaryTree;
+
 
 public class AnalyticExpressionTree extends RecursiveBinaryTree<String> {
 

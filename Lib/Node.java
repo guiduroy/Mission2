@@ -1,3 +1,4 @@
+package Lib;
 public class Node {
 	private Object o;
 	private Node next;

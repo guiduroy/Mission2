@@ -1,3 +1,5 @@
+package Lib;
+
 public class MyStack implements Stack {
 	
 	private int size;

@@ -1,3 +1,11 @@
+import Lib.RecursiveBinaryTree;
+import Lib.Stack;
+import Operators.AdditionOperator;
+import Operators.DivisionOperator;
+import Operators.MultiplicationOperator;
+import Operators.PowerOperator;
+import Operators.SubtractionOperator;
+
 /**
 *Classe ExpressionInterpretor 
 *Authors: Christophe Deleval, Guillaume du Roy

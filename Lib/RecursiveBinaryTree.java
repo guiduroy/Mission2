@@ -1,3 +1,4 @@
+package Lib;
 /**
  * Classe RecursiveBinaryTree implements RBinaryTree
  * Authors : Christophe Deleval, Anne-Sophie Branders

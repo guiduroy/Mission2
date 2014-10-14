@@ -1,3 +1,6 @@
+package Operators;
+import Lib.RecursiveBinaryTree;
+
 
 public class CosinusOperator extends RecursiveBinaryTree {
 	

@@ -1,3 +1,5 @@
+package Lib;
+
 public interface Stack {
 	/**
 	 * Remove the top value of the stack

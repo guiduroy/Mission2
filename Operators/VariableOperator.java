@@ -4,11 +4,11 @@ import Code.FormalExpressionTree;
 public class VariableOperator extends FormalExpressionTree {
 	
 	public VariableOperator (String variable) {
-		super ();
+		super();
 		this.setElement(variable);
 	}
 	
 	public FormalExpressionTree derive () {
-		return new NumberOperator ("1");
+		return new NumberOperator("1");
 	}
 }

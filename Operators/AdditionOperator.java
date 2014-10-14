@@ -15,4 +15,3 @@ public class AdditionOperator extends FormalExpressionTree {
 		return add;
 	}
 }
-

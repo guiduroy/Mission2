@@ -23,4 +23,3 @@ public class MultiplicationOperator extends FormalExpressionTree {
 		return res;
 	}
 }
-

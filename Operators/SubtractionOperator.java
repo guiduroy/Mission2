@@ -7,7 +7,7 @@ public class SubtractionOperator extends FormalExpressionTree {
 		super ();
 		this.setElement("-");
 	}
-
+	
 	public FormalExpressionTree derive () {
 		SubtractionOperator sub = new SubtractionOperator ();
 		sub.setLeft(((FormalExpressionTree)this.getLeft()).derive());
@@ -15,4 +15,3 @@ public class SubtractionOperator extends FormalExpressionTree {
 		return sub;
 	}
 }
-

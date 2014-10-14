@@ -61,5 +61,17 @@ public interface RBinaryTree<E> {
   public void setRight (RBinaryTree<E> tree);
   
   public RecursiveBinaryTree derive ();
+	
+	/**
+     * @pre this is not empty.
+     * @post return true if there is a right subtree.
+     */
+    public RBinaryTree<E> hasRight();
+	
+	/**
+     * @pre this is not empty.
+     * @post return true if there is a left subtree.
+     */
+    public RBinaryTree<E> hasLeft();
 
 }

@@ -61,7 +61,7 @@ public class RecursiveBinaryTree<E> implements RBinaryTree<E> {
      * @pre this is not empty.
      * @post return a reference to the left subtree.
      */
-    public RBinaryTree<E> getLeft(){
+    public RecursiveBinaryTree<E> getLeft(){
         return left;
     }
 
@@ -69,7 +69,7 @@ public class RecursiveBinaryTree<E> implements RBinaryTree<E> {
      * @pre this is not empty.
      * @post return a reference to the right subtree.
      */
-    public RBinaryTree<E> getRight(){
+    public RecursiveBinaryTree<E> getRight(){
         return right;
     }
 	

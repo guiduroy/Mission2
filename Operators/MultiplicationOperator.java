@@ -2,6 +2,10 @@ package Operators;
 import Code.FormalExpressionTree;
 
 public class MultiplicationOperator extends FormalExpressionTree {
+
+	public MultiplicationOperator() {
+		this.setElement("*");
+	}
 	
 	public FormalExpressionTree derive () {
 		MultiplicationOperator left = new MultiplicationOperator ();
@@ -17,9 +21,4 @@ public class MultiplicationOperator extends FormalExpressionTree {
 		res.setRight(right);
 		return res;
 	}
-	
-	public String getOperator () {
-		return "*";
-	}
 }
-

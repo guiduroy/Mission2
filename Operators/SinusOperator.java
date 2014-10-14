@@ -2,6 +2,10 @@ package Operators;
 import Code.FormalExpressionTree;
 
 public class SinusOperator extends FormalExpressionTree {
+
+	public SinusOperator() {
+		this.setElement("Sin");
+	}
 	
 	public FormalExpressionTree derive () {
 		CosinusOperator cos = new CosinusOperator ();
@@ -11,9 +15,5 @@ public class SinusOperator extends FormalExpressionTree {
 		res.setLeft(((FormalExpressionTree)this.getLeft()).derive());
 		res.setRight(cos);
 		return res;
-	}
-	
-	public String getOperator () {
-		return "sin";
 	}
 }

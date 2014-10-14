@@ -1,13 +1,12 @@
 package Operators;
-import Lib.RecursiveBinaryTree;
+import Code.FormalExpressionTree;
 
-
-public class PowerOperator extends RecursiveBinaryTree {
+public class PowerOperator extends FormalExpressionTree {
 	
-	public RecursiveBinaryTree derive () {
+	public FormalExpressionTree derive () {
 		SubtractionOperator one = new SubtractionOperator ();
 		one.setLeft(this.getRight());
-		one.setRight(new NumberOperator (1));
+		one.setRight(new NumberOperator ("1"));
 		
 		PowerOperator two = new PowerOperator ();
 		two.setLeft(this.getLeft());
@@ -19,7 +18,7 @@ public class PowerOperator extends RecursiveBinaryTree {
 		
 		MultiplicationOperator four = new MultiplicationOperator ();
 		four.setLeft(three);
-		four.setRight(this.getLeft().derive());
+		four.setRight(((FormalExpressionTree)this.getLeft()).derive());
 		
 		return four;
 	}

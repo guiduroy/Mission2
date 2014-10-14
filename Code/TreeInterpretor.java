@@ -1,4 +1,5 @@
-import Lib.RecursiveBinaryTree;
+package Code;
+import Lib.FormalExpressionTree;
 
 /**
  * Classe TreeInterpretor transforming a binary tree in a parenthesized expression using the Eurle tour
@@ -20,7 +21,7 @@ public class TreeInterpretor {
 	 * Euler tour traversal of a binary tree
 	 * Returns a String with the fully parenthesized arithmetic expression
 	 */
-	public void eulerTour (RecursiveBinaryTree tree){
+	public void eulerTour (FormalExpressionTree tree){
 		/* algorithme : 
 		 if !(tree.isLeaf()) then print "("
 		 if tree.hasLeft() then eulerTour(getLeft(tree))
@@ -35,7 +36,7 @@ public class TreeInterpretor {
 		}
 		
 		if (tree.hasLeft()) { //apply the Euler tour on the left subtree
-			eulerTour(tree.getLeft());
+			eulerTour((FormalExpressionTree)tree.getLeft());
 		}
 		
 		if (!(tree.isLeaf())) { //add the operator of the root
@@ -47,7 +48,7 @@ public class TreeInterpretor {
 		}
 		
 		if (tree.hasRight()) { //apply the Euler tour on the right subtree
-			eulerTour(tree.getRight());
+			eulerTour((FormalExpressionTree)tree.getRight());
 		}
 		
 		if (!(tree.isLeaf())) { //add a closed parenthesis
@@ -59,14 +60,14 @@ public class TreeInterpretor {
 	/**
 	 * Print an operator
 	 */
-	public String printOperator (RecursiveBinaryTree tree){
-	    return tree.getOperator();
+	public String printOperator (FormalExpressionTree tree){
+	    return tree.root();
 	}
 	
 	/**
 	 * Print a variable
 	 */
-	public String printVariable (RecursiveBinaryTree tree){
+	public String printVariable (FormalExpressionTree tree){
 		return (tree.root()).toString();
 	}
 	

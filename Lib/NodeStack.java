@@ -53,5 +53,4 @@ public class NodeStack<E> implements Stack<E> {
 			return next;
 		}
 	}
-
 }

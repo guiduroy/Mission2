@@ -1,13 +1,12 @@
 package Operators;
-import Lib.RecursiveBinaryTree;
+import Code.FormalExpressionTree;
 
+public class SubtractionOperator extends FormalExpressionTree {
 
-public class SubtractionOperator extends RecursiveBinaryTree {
-
-	public RecursiveBinaryTree derive () {
+	public FormalExpressionTree derive () {
 		SubtractionOperator sub = new SubtractionOperator ();
-		sub.setLeft(this.getLeft().derive());
-		sub.setRight(this.getRight().derive());
+		sub.setLeft(((FormalExpressionTree)this.getLeft()).derive());
+		sub.setRight(((FormalExpressionTree)this.getRight()).derive());
 		return sub;
 	}
 	

@@ -1,15 +1,14 @@
 package Operators;
-import Lib.RecursiveBinaryTree;
+import Code.FormalExpressionTree;
 
-
-public class SinusOperator extends RecursiveBinaryTree {
+public class SinusOperator extends FormalExpressionTree {
 	
-	public RecursiveBinaryTree derive () {
+	public FormalExpressionTree derive () {
 		CosinusOperator cos = new CosinusOperator ();
 		cos.setLeft(this.getLeft());
 		
 		MultiplicationOperator res = new MultiplicationOperator ();
-		res.setLeft(this.getLeft().derive());
+		res.setLeft(((FormalExpressionTree)this.getLeft()).derive());
 		res.setRight(cos);
 		return res;
 	}

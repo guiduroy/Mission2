@@ -1,16 +1,15 @@
 package Operators;
-import Lib.RecursiveBinaryTree;
+import Code.FormalExpressionTree;
 
-
-public class VariableOperator extends RecursiveBinaryTree {
+public class VariableOperator extends FormalExpressionTree {
 	
 	public VariableOperator (String variable) {
 		super ();
 		this.setElement(variable);
 	}
 	
-	public RecursiveBinaryTree derive () {
-		return new NumberOperator (1);
+	public FormalExpressionTree derive () {
+		return new NumberOperator ("1");
 	}
 	
 	public String getOperator () {

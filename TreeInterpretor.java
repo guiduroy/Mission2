@@ -12,6 +12,10 @@ public class TreeInterpretor {
 	protected String par1 = "(";
 	protected String par2 = ")";
 	protected String expression = "";
+	
+	public TreeInterpretor(){
+	}
+	
 	/**
 	 * Euler tour traversal of a binary tree
 	 * Returns a String with the fully parenthesized arithmetic expression
@@ -26,27 +30,27 @@ public class TreeInterpretor {
 		 if !(tree.isLeaf()) then print ")"
 		 */
 		
-		if !(tree.isLeaf()) { //add an open parenthesis
+		if (!(tree.isLeaf())) { //add an open parenthesis
 			expression = expression.concat(par1);
 		}
 		
 		if (tree.hasLeft()) { //apply the Euler tour on the left subtree
-			eulerTour(getLeft(tree));
+			eulerTour(tree.getLeft());
 		}
 		
-		if !(tree.isLeaf()) { //add the operator of the root
+		if (!(tree.isLeaf())) { //add the operator of the root
 			expression = expression.concat(printOperator(tree));
 		}
 		
 		else { //add the variable of the leaf
-			expression = expression.concat(printVariable);
+			expression = expression.concat(printVariable(tree));
 		}
 		
 		if (tree.hasRight()) { //apply the Euler tour on the right subtree
-			eulerTour(getLeft(tree));
+			eulerTour(tree.getRight());
 		}
 		
-		if !(tree.isLeaf()) { //add a closed parenthesis
+		if (!(tree.isLeaf())) { //add a closed parenthesis
 			expression = expression.concat(par2);
 		}
 		
@@ -56,14 +60,14 @@ public class TreeInterpretor {
 	 * Print an operator
 	 */
 	public String printOperator (RecursiveBinaryTree tree){
-		return tree.root().getOperator();
+	    return tree.getOperator();
 	}
 	
 	/**
-	 * Print an variable
+	 * Print a variable
 	 */
 	public String printVariable (RecursiveBinaryTree tree){
-		return tree.root().getVariable();
+		return (tree.root()).toString();
 	}
 	
 	/*

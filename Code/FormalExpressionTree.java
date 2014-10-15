@@ -29,7 +29,7 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
 					num = (10*num) + (int)(st.charAt(i+j));
 					i++;
 				}
-				NumberOperator node = new NumberOperator(num);
+				NumberOperator node = new NumberOperator(Integer.toString(num));
 				s.push(node);
 			}
 
@@ -82,7 +82,7 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
 				}
 				
 				else {
-					VariableOperator node = new VariableOperator(c);
+					VariableOperator node = new VariableOperator(Character.toString(c));
 					s.push(node);
 				}
 			}

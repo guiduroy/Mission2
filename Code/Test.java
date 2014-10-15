@@ -7,27 +7,16 @@ import java.lang.*;
  */
 public class Test
 {
-    public static void main(String[] args) {
+    public void main() throws EmptyStackException {
 
-        AdditionOperator addition = new AdditionOperator();
+        String s = "((10*2)/(4-x))";
+        System.out.println(s);
+        FormalExpressionTree tree = buildFromString(s);
+        String s2 = toString(tree);
+        System.out.println(s2);
         
-        RecursiveBinaryTree leftTree = new RecursiveBinaryTree();
-        leftTree.setElement(2);
-        addition.setLeft(leftTree);
-        
-        MultiplicationOperator multiplication = new MultiplicationOperator();
-        addition.setRight(multiplication);
-        
-        RecursiveBinaryTree leftmult = new RecursiveBinaryTree();
-        leftmult.setElement(4);
-        multiplication.setLeft(leftmult);
-        
-        RecursiveBinaryTree rightmult = new RecursiveBinaryTree();
-        rightmult.setElement(3);
-        multiplication.setRight(rightmult);
-        
-        TreeInterpretor newexpression = new TreeInterpretor();
-        newexpression.eulerTour(addition);
-        System.out.println(newexpression.printExpression());
+        FormalExpressionTree derivedtree = tree.derive();
+        String s3 = toString((derivedtree));
+        System.out.println(s3);
     }
 }

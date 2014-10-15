@@ -4,6 +4,7 @@ import Lib.RecursiveBinaryTree;
 import Lib.NodeStack;
 import Operators.NumberOperator;
 
+
 public class FormalExpressionTree extends RecursiveBinaryTree<String> {
 
     protected String par1 = "(";
@@ -11,7 +12,7 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
     protected String expression;
 
     public FormalExpressionTree derive () {
-    	return null;
+        return null;
     } 
     
     public void eulerTour (FormalExpressionTree tree){

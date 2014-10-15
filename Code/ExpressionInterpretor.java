@@ -18,7 +18,6 @@ public class ExpressionInterpretor() {
 
 		char c;
 		int num;
-		char var;
 		Stack s = new Stack();
 
 		for(int i=0; i<st.length; i++){
@@ -74,10 +73,25 @@ public class ExpressionInterpretor() {
 			}
 
 			else {
-				var = c;
-				RecursiveBinaryTree node = new RecursiveBinaryTree();
-				node.setElement(var);
-				current.setRight(node);
+				if (c=='s' && st.charAt(i+1)=='i' && st.charAt(i+2)=='n') {
+					SinusOperator node = new SinusOperator();
+					node.setElement(num);
+					s.push(node);
+					i=i+2;
+				}
+
+				else if (c=='c' && st.charAt(i+1)=='o' && st.charAt(i+2)=='s') {
+					CosinusOperator node = new CosinusOperator();
+					node.setElement(num);
+					s.push(node);
+					i=i+2;
+				}
+				
+				else {
+					RecursiveBinaryTree node = new RecursiveBinaryTree();
+					node.setElement(c);
+					current.setRight(node);
+				}
 			}
 		}
 

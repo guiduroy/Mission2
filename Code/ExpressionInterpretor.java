@@ -33,7 +33,7 @@ public class ExpressionInterpretor() {
 				node.setElement(num);
 			}
 
-			else if(isOperator(c)){
+			else if(c=='+'||c=='-'||c=='*'||c=='/'||c=='^'){
 				if (c=='+') {
 					AdditionOperator node = new AdditionOperator();
 					node.setElement(num);
@@ -107,13 +107,5 @@ public class ExpressionInterpretor() {
 
 		return s.pop();
 	}
-
-	public boolean isOperator(char c){
-		return(c=='+'||c=='-'||c=='*'||c=='/'||c=='^');
-	}
-	
-	public boolean 		
-
-	
 
 }

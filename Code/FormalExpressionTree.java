@@ -6,12 +6,54 @@ import Operators.NumberOperator;
 
 public class FormalExpressionTree extends RecursiveBinaryTree<String> {
 
+    protected String par1 = "(";
+    protected String par2 = ")";
+    protected String expression;
+
     public FormalExpressionTree derive () {
     	return null;
     } 
     
-    public String toString() {
-    	return null;
+    public void eulerTour (FormalExpressionTree tree){
+        /* algorithme : 
+         if !(tree.isLeaf()) then print "("
+         if tree.hasLeft() then eulerTour(getLeft(tree))
+         if !(tree.isLeaf() then print the operator
+         else print the value
+         if tree.hasRight() then eulerTour(getLeft(tree))
+         if !(tree.isLeaf()) then print ")"
+         */
+        
+        if (!(tree.isLeaf())) { //add an open parenthesis
+            expression = expression.concat(par1);
+        }
+        
+        if (tree.hasLeft()) { //apply the Euler tour on the left subtree
+            eulerTour((FormalExpressionTree)tree.getLeft());
+        }
+        
+        if (!(tree.isLeaf())) { //add the operator of the root
+            expression = expression.concat(tree.root());
+        }
+        
+        else { //add the variable of the leaf
+            expression = expression.concat((tree.root()).toString());
+        }
+        
+        if (tree.hasRight()) { //apply the Euler tour on the right subtree
+            eulerTour((FormalExpressionTree)tree.getRight());
+        }
+        
+        if (!(tree.isLeaf())) { //add a closed parenthesis
+            expression = expression.concat(par2);
+        }
+        
+    }
+
+    public String toString(FormalExpressionTree tree) {
+        expression = "";
+        eulerTour(tree);
+        return expression;
     }
     
     

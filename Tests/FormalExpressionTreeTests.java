@@ -24,10 +24,11 @@ public class FormalExpressionTreeTests extends Tests {
 		testTreeFromString("(x^4+sin((x+(2/x))))");
 		testTreeFromString("((x^(-1))/6)");
 		testTreeFromString("((x*(sin(((x/10)+x))^3))-cos(x))");
+		// Pour ces expressions mal formées il va falloir modifier la méthode testTreeFromString 
+		// ou en écrire une nouvelle. 
 		testTreeFromString("(x+)3+x))");
 		testTreeFromString("(y*cos(x))");
 		testTreeFromString("(10^(x+20))");
-		
 		
 		testDerive("10", "0");
 		testDerive("-4", "0");

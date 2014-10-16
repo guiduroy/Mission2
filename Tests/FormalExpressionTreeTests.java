@@ -7,7 +7,6 @@ import Lib.FormalExpressionTree;
  */
 
 public class FormalExpressionTreeTests extends Tests {
-	// Les cas en commentaire sont les cas qui ne fonctionne pas encore
 	public static void main(String[] args) {
 		testTreeFromString("10"); 
 		testTreeFromString("(10+x)");
@@ -25,12 +24,11 @@ public class FormalExpressionTreeTests extends Tests {
 	    testDerive("cos(x)","(0-(1*sin(x)))");
 	    testDerive("((10/x)+(2*x))","((((0*x)-(10*1))/(x^2))+((0*x)+(2*1)))");
 	    testDerive("(x*(1-sin(x)))","((1*(1-sin(x)))+(x*(0-(1*cos(x)))))");
-//	    testDerive("(x^4+sin((x+(2/x))))","Ecrire derivée attendue ici...");
-//	    testDerive("((x^(-1))/6)","Ecrire derivée attendue ici...");
-//	    testDerive("((x*(sin(((x/10)+x))^3))-cos(x))","Ecrire derivée attendue ici...");
-//	    testDerive("(x+)3+x))","Ecrire derivée attendue ici...");
-//	    testDerive("(y*cos(x))","Ecrire derivée attendue ici...");
-//	    testDerive("(10^(x+20))","Ecrire derivée attendue ici...");
+	    testDerive("(x^4+sin((x+(2/x))))","((x*((4+sin((x+(2/x))))^(x-1)))*(0+((1+(((0*x)-(2*1))/(x^2)))*cos((x+(2/x))))))");
+	    testDerive("((x^(0-1))/6)","((((((0-1)*(x^((0-1)-1)))*1)*6)-((x^(0-1))*0))/(6^2))");
+	    testDerive("((x*(sin(((x/10)+x))^3))-cos(x))","(((1*(sin(((x/10)+x))^3))+(x*((3*(sin(((x/10)+x))^(3-1)))*(((((1*10)-(x*0))/(10^2))+1)*cos(((x/10)+x))))))-(0-(1*sin(x))))");
+	    testDerive("(y*cos(x))","((1*cos(x))+(y*(0-(1*sin(x)))))");
+	    testDerive("(10^(x+20))","(((x+20)*(10^((x+20)-1)))*0)");
 	}
 
 	public static void testTreeFromString(String string) {

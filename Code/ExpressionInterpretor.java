@@ -6,15 +6,18 @@ import Operators.DivisionOperator;
 import Operators.MultiplicationOperator;
 import Operators.PowerOperator;
 import Operators.SubtractionOperator;
+import Operators.SinusOperator;
+import Operators.CosinusOperator;
+import Operators.VariableOperator;
 
 /**
 *Classe ExpressionInterpretor 
 *Authors: Christophe Deleval, Guillaume du Roy
 *Date : 14/10/2014
 */
-public class ExpressionInterpretor() {
+public class ExpressionInterpretor {
 	
-	public RecursiveBinaryTree<E> Interpretor(string st){
+	public RecursiveBinaryTree<E> Interpretor(String st){
 
 		char c;
 		int num;

@@ -2,7 +2,14 @@
 
 import Lib.RecursiveBinaryTree;
 import Lib.NodeStack;
-import Operators.NumberOperator;
+import Operators.AdditionOperator;
+import Operators.DivisionOperator;
+import Operators.MultiplicationOperator;
+import Operators.PowerOperator;
+import Operators.SubtractionOperator;
+import Operators.SinusOperator;
+import Operators.CosinusOperator;
+import Operators.VariableOperator;
 
 
 public class FormalExpressionTree extends RecursiveBinaryTree<String> {

@@ -29,8 +29,8 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
     	String expression = "";
         String par1 = "(";
         String par2 = ")";
-                
-        if (!(this.isLeaf())) { //add an open parenthesis
+       
+         if (!(this.isLeaf())&& !(this.root().equals("sin")||this.root().equals("cos"))) { //add an open parenthesis
             expression = expression.concat(par1);
         }
         
@@ -39,15 +39,23 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
         }
        
         expression = expression.concat(this.root());
+        if (!(this.isLeaf())&& (this.root().equals("sin")||this.root().equals("cos"))) { //add an open parenthesis
+            expression = expression.concat(par1);
+        }
         
+       
         if (this.hasRight()) { //apply the Euler tour on the right subtree
         	expression = expression.concat(this.getRight().toString());
         }
-        
-        if (!(this.isLeaf())) { //add a closed parenthesis
+        if (!(this.isLeaf())&& (this.root().equals("sin")||this.root().equals("cos"))) { //add an open parenthesis
             expression = expression.concat(par2);
         }
         
+      
+        if (!(this.isLeaf()) && !(this.root().equals("sin")||this.root().equals("cos"))) { //add a closed parenthesis
+            expression = expression.concat(par2);
+        }
+       ;
         return expression;
     }
 
@@ -97,22 +105,27 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
 	                }
 	            }
 	
-	            else if(c == ' ' || c == '(') { }
+	            else if(c == ' ' || c == '(') { 
+	            	
+	            }
 	
 	            else if(c == ')'){
-	            	
 	            	FormalExpressionTree t2 = s.pop();
+
 	            	FormalExpressionTree t  = s.pop();
 	            	if(t.toString().equals("sin")||t.toString().equals("cos")){
-	            		
+	           
+		            	t.setRight(t2);
+
+		                s.push(t);
 	            	}else{
-	            		FormalExpressionTree t1 = s.pop();
-	            		t.setLeft(t1);
+	            		
+		            	FormalExpressionTree t1 = s.pop();
+		            	t.setLeft(t1);    	
+		            	              
+		            	t.setRight(t2);
+		                s.push(t);
 	            	}
-	            	
-	               
-	                t.setRight(t2);
-	                s.push(t);
 	            }
 	
 	            else {

@@ -10,10 +10,10 @@ public class CosinusOperator extends FormalExpressionTree {
 	
 	public FormalExpressionTree derive () {
 		SinusOperator sin = new SinusOperator ();
-		sin.setLeft(this.getLeft());
+		sin.setRight(this.getRight());
 		
 		MultiplicationOperator mul = new MultiplicationOperator ();
-		mul.setLeft(((FormalExpressionTree)this.getLeft()).derive());
+		mul.setLeft(((FormalExpressionTree)this.getRight()).derive());
 		mul.setRight(sin);
 		
 		SubtractionOperator res = new SubtractionOperator ();

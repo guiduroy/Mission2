@@ -18,7 +18,7 @@ public class FormalExpressionTreeTests extends Tests {
 		testTreeFromString("((x^3)/5)");
 		System.out.println("----------------------------------");
 		testDerive("10", "0");
-//		testDerive("-4", "0");
+		testDerive("(0-4)", "(0-0)");
 		testDerive("sin(x)","(1*cos(x))");
 		testDerive("((10*2)+(4-x))", "(((0*2)+(10*0))+(0-1))");
 //	    testDerive("-4","0");

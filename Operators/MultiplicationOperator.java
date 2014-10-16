@@ -1,5 +1,5 @@
 package Operators;
-import Code.FormalExpressionTree;
+import Lib.FormalExpressionTree;
 
 public class MultiplicationOperator extends FormalExpressionTree {
 

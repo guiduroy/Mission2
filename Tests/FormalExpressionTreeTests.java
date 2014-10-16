@@ -21,11 +21,10 @@ public class FormalExpressionTreeTests extends Tests {
 		testDerive("(0-4)", "(0-0)");
 		testDerive("sin(x)","(1*cos(x))");
 		testDerive("((10*2)+(4-x))", "(((0*2)+(10*0))+(0-1))");
-//	    testDerive("-4","0");
-//	    testDerive("(x/12)","Ecrire derivée attendue ici...");
+	    testDerive("(x/12)","(((1*12)-(x*0))/(12^2))");
 	    testDerive("cos(x)","(0-(1*sin(x)))");
-//	    testDerive("((10/x)+(2*x))","Ecrire derivée attendue ici...");
-//	    testDerive("(x*(1-sin(x)))","Ecrire derivée attendue ici...");
+	    testDerive("((10/x)+(2*x))","((((0*x)-(10*1))/(x^2))+((0*x)+(2*1)))");
+	    testDerive("(x*(1-sin(x)))","((1*(1-sin(x)))+(x*(0-(1*cos(x)))))");
 //	    testDerive("(x^4+sin((x+(2/x))))","Ecrire derivée attendue ici...");
 //	    testDerive("((x^(-1))/6)","Ecrire derivée attendue ici...");
 //	    testDerive("((x*(sin(((x/10)+x))^3))-cos(x))","Ecrire derivée attendue ici...");

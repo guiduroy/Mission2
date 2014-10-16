@@ -60,17 +60,20 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
 	
 	        for(int i=0; i<st.length(); i++){
 	        	c = st.charAt(i);
-	            
+	  
 	            if(Character.isDigit(c)){
 	                num = Character.getNumericValue(c);
-	                for(j=1; st.charAt(i+j) >= '0' && st.charAt(i+j) <= '9'; j++){
+	               
+	                for(j=1; (i+j)<st.length() && st.charAt(i+j) >= '0' && st.charAt(i+j) <= '9' ; j++){
 	                    num = (10*num) + Character.getNumericValue(st.charAt(i+j));
 	                }
+	                
 	                i = i+j-1;
+	               
 	                NumberOperator node = new NumberOperator(Integer.toString(num));
 	                s.push(node);
 	            }
-	
+	            
 	            else if(c=='+'||c=='-'||c=='*'||c=='/'||c=='^'){
 	                if (c=='+') {
 	                    AdditionOperator node = new AdditionOperator();
@@ -97,10 +100,17 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
 	            else if(c == ' ' || c == '(') { }
 	
 	            else if(c == ')'){
+	            	
 	            	FormalExpressionTree t2 = s.pop();
 	            	FormalExpressionTree t  = s.pop();
-	            	FormalExpressionTree t1 = s.pop();
-	                t.setLeft(t1);
+	            	if(t.toString().equals("sin")||t.toString().equals("cos")){
+	            		
+	            	}else{
+	            		FormalExpressionTree t1 = s.pop();
+	            		t.setLeft(t1);
+	            	}
+	            	
+	               
 	                t.setRight(t2);
 	                s.push(t);
 	            }

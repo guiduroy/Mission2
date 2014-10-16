@@ -6,7 +6,7 @@ public class Tests {
 		 if (input.equals(expectedOutput)) {
 			 System.out.println("OK!");
 		 } else {
-			System.out.println("ERROR: '" + expectedOutput + "' was expected but got'"+ input + "' as output.");
+			System.out.println("ERROR: '" + expectedOutput + "' was expected but got '"+ input + "' as output.");
 		 }
 	}
 }

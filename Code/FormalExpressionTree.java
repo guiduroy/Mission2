@@ -11,6 +11,13 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
     protected String par2 = ")";
     protected String expression;
 
+    public FormalExpressionTree(String expression) {
+        this.expression = expression;
+    }
+
+    public FormalExpressionTree() {
+        this.expression = "";
+    }
     public FormalExpressionTree derive () {
         return null;
     } 

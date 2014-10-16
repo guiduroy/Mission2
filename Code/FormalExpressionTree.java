@@ -1,7 +1,9 @@
- 
+package Code;
 
 import Lib.RecursiveBinaryTree;
 import Lib.NodeStack;
+import Lib.EmptyStackException;
+
 import Operators.AdditionOperator;
 import Operators.DivisionOperator;
 import Operators.MultiplicationOperator;
@@ -10,6 +12,7 @@ import Operators.SubtractionOperator;
 import Operators.SinusOperator;
 import Operators.CosinusOperator;
 import Operators.VariableOperator;
+import Operators.NumberOperator;
 
 
 public class FormalExpressionTree extends RecursiveBinaryTree<String> {
@@ -72,10 +75,10 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
     }
     
     
-    public FormalExpressionTree buildFromString(String st) throws EmptyStackException {
+    protected FormalExpressionTree buildFromString(String st) throws EmptyStackException {
         char c;
         int num, j;
-        Stack s = new NodeStack();
+        NodeStack<FormalExpressionTree> s = new NodeStack<FormalExpressionTree>();
 
         for(int i=0; i<st.length(); i++){
             c = st.charAt(i);
@@ -116,9 +119,9 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
             else if(c == ' ' || c == '(') { }
 
             else if(c == ')'){
-                RecursiveBinaryTree t2 = (RecursiveBinaryTree) s.pop();
-                RecursiveBinaryTree t = (RecursiveBinaryTree) s.pop();
-                RecursiveBinaryTree t1 = (RecursiveBinaryTree) s.pop();
+            	FormalExpressionTree t2 = s.pop();
+            	FormalExpressionTree t  = s.pop();
+            	FormalExpressionTree t1 = s.pop();
                 t.setLeft(t1);
                 t.setRight(t2);
                 s.push(t);
@@ -146,9 +149,9 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
 
         while (s.size() > 1)
         {
-            RecursiveBinaryTree t2 = (RecursiveBinaryTree) s.pop();
-            RecursiveBinaryTree t = (RecursiveBinaryTree) s.pop();
-            RecursiveBinaryTree t1 = (RecursiveBinaryTree) s.pop();
+        	FormalExpressionTree t2 = s.pop();
+        	FormalExpressionTree t  = s.pop();
+        	FormalExpressionTree t1 = s.pop();
             t.setLeft(t2);
             t.setRight(t1);
             s.push(t);

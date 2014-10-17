@@ -1,3 +1,8 @@
+/**
+ * Author : Gregory Vander Schueren
+ * Date : 16/10/2014
+ */
+
 package Lib;
 
 public class NodeStack<E> implements Stack<E> {

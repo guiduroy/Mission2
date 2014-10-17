@@ -1,5 +1,9 @@
-package Tests;
+/**
+ * Author : Gregory Vander Schueren
+ * Date : 16/10/2014
+ */
 
+package Tests;
 public class Tests {
 	
 	public static void assertOutput(String input, String expectedOutput) {

@@ -1,3 +1,8 @@
+/**
+ * Author : Gregory Vander Schueren, Guillaume du Roy, Ann Sophie Branders, Christophe Deleval 
+ * Date : 16/10/2014
+ */
+
 package Lib;
 
 import Operators.AdditionOperator;

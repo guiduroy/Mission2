@@ -1,10 +1,11 @@
-package Tests;
-import Lib.FormalExpressionTree;
 
 /**
  * Author : Gregory Vander Schueren
  * Date : 16/10/2014
  */
+
+package Tests;
+import Lib.FormalExpressionTree;
 
 public class FormalExpressionTreeTests extends Tests {
 	public static void main(String[] args) {

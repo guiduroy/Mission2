@@ -1,5 +1,5 @@
 /**
- * Author : Gregory Vander Schueren, Guillaume du Roy, Ann Sophie Branders, Christophe Deleval 
+ * Author : Gregory Vander Schueren, Guillaume du Roy, Anne-Sophie Branders, Christophe Deleval 
  * Date : 16/10/2014
  */
 
@@ -93,10 +93,19 @@ public abstract class FormalExpressionTree extends RecursiveBinaryTree<String> {
 	                    s.push(node);
 	                }
 	                else if (c=='-') {
-	                    SubtractionOperator node = new SubtractionOperator();
-	                    s.push(node);
-	                }
-	                else if (c=='*') {
+                        if(i>0&&(Character.isDigit(st.charAt(i-1))||st.charAt(i-1)==')')){
+                        
+                        SubtractionOperator node = new SubtractionOperator();
+                        s.push(node);
+                       }
+                       else{
+                           NumberOperator node = new NumberOperator(Integer.toString(0));
+                           s.push(node);
+                           SubtractionOperator node2 = new SubtractionOperator();
+                        s.push(node2);
+                       
+                       }
+                    }	                else if (c=='*') {
 	                    MultiplicationOperator node = new MultiplicationOperator();
 	                    s.push(node);
 	                }

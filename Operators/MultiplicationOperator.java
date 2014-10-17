@@ -1,6 +1,10 @@
 package Operators;
 import Lib.FormalExpressionTree;
 
+/**
+ * @author Alexander Gerniers
+ */
+
 public class MultiplicationOperator extends FormalExpressionTree {
 
 	public MultiplicationOperator () {

@@ -1,5 +1,5 @@
 /**
- * Author : Gregory Vander Schueren, Guillaume du Roy, Ann Sophie Branders, Christophe Deleval 
+ * Author : Gregory Vander Schueren, Guillaume du Roy, Anne-Sophie Branders, Christophe Deleval 
  * Date : 16/10/2014
  */
 

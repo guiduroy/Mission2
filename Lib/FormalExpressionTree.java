@@ -16,7 +16,7 @@ import Operators.VariableOperator;
 import Operators.NumberOperator;
 
 
-public class FormalExpressionTree extends RecursiveBinaryTree<String> {
+public abstract class FormalExpressionTree extends RecursiveBinaryTree<String> {
 
     public FormalExpressionTree derive () {
     	return null;
@@ -166,7 +166,7 @@ public class FormalExpressionTree extends RecursiveBinaryTree<String> {
 		} 
 		catch (EmptyStackException e) {
 			System.out.println("Error building tree. Return empty tree.");
-			return new FormalExpressionTree();
+			return null;
 		}
     }    
 }
